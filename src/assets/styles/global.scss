@@ -1,0 +1,17 @@
+@import '../../assets/styles/variables.scss';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Sora', sans-serif;
+}
+
+body {
+  background: #F6F5FC;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+}
