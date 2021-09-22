@@ -6,7 +6,7 @@ import edit from '../../assets/images/edit.svg';
 export default function Home() {
   return (
     <div className={styles.container}>
-      <input type="text" placeholder="Pesquisar contato..." />
+      <input className={styles.input} type="text" placeholder="Pesquisar contato..." />
       <header className={styles.header}>
         <strong>2 contatos</strong>
         <a href="/">Novo contato</a>
