@@ -21,5 +21,7 @@ module.exports = {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/react-in-jsx-scope': 'off',
     'jsx-a11y/control-has-associated-label': 'off',
+    'react/button-has-type': 'off',
+    'react/require-default-props': 'off',
   },
 };

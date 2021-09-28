@@ -1,6 +1,5 @@
-import Input from '../../components/Input';
+import ContactForm from '../../components/ContactForm';
 import PageHeader from '../../components/PageHeader';
-import Select from '../../components/Select';
 
 export default function NewContact() {
   return (
@@ -8,13 +7,9 @@ export default function NewContact() {
       <PageHeader
         title="New Contact"
       />
-      <Input type="text" />
-      <Select>
-        <option value="Teste">Teste</option>
-        <option value="Teste">Instagram</option>
-        <option value="Teste">Teste</option>
-        <option value="Teste">Teste</option>
-      </Select>
+      <ContactForm
+        buttonLabel="Cadastrar"
+      />
     </>
   );
 }

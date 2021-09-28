@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import styles from './styles.module.scss';
 import arrow from '../../assets/images/arrow.svg';
 import trash from '../../assets/images/trash.svg';
@@ -9,7 +11,7 @@ export default function Home() {
       <input className={styles.input} type="text" placeholder="Pesquisar contato..." />
       <header className={styles.header}>
         <strong>2 contatos</strong>
-        <a href="/">Novo contato</a>
+        <Link to="/new">Novo contato</Link>
       </header>
 
       <div className={styles.wrapper}>
@@ -30,34 +32,14 @@ export default function Home() {
             <span>(11) 99999-9999</span>
           </div>
           <div className={styles.actions}>
-            <a href="/">
+            <Link to="/edit/123">
               <img src={edit} alt="Edit" />
-            </a>
+            </Link>
             <button type="button">
               <img src={trash} alt="Delete" />
             </button>
           </div>
         </div>
-
-        <div className={styles.card}>
-          <div className={styles.info}>
-            <div className={styles.contactName}>
-              <strong>Mateus Silva</strong>
-              <small>instagram</small>
-            </div>
-            <span>mateus@email.com</span>
-            <span>(11) 99999-9999</span>
-          </div>
-          <div className={styles.actions}>
-            <a href="/">
-              <img src={edit} alt="Edit" />
-            </a>
-            <button type="button">
-              <img src={trash} alt="Delete" />
-            </button>
-          </div>
-        </div>
-
       </div>
     </div>
   );
