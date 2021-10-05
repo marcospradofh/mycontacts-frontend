@@ -1,7 +1,7 @@
 @import '../../assets/styles/variables.scss';
 
-.button {
-  width: 100%;
+.Button {
+  padding: 0 16px;
   height: 52px;
   border: none;
   background: $primary-color-main;
@@ -23,5 +23,13 @@
   &[disabled] {
     background: #ccc;
     cursor: default;
+  }
+
+  &__danger {
+    background: $danger-color-main;
+
+    &:hover {
+      background: $danger-color-light;
+    }
   }
 }

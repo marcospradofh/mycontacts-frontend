@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
-import styles from './styles.module.scss';
+import './Select.scss';
 
-export default function Select({ children }) {
+export default function Select({ children, value, onChange }) {
   return (
     <select
-      className={styles.input}
+      className="Select"
+      value={value}
+      onChange={onChange}
     >
       {children}
     </select>
@@ -13,4 +15,10 @@ export default function Select({ children }) {
 
 Select.propTypes = {
   children: PropTypes.node.isRequired,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+};
+Select.defaultProps = {
+  value: null,
+  onChange: () => {},
 };

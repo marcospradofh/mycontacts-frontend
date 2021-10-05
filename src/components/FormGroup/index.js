@@ -1,14 +1,20 @@
 import PropTypes from 'prop-types';
-import styles from './styles.module.scss';
+import './FormGroup.scss';
 
-export default function FormGroup({ children }) {
+export default function FormGroup({ children, error }) {
   return (
-    <div className={styles.container}>
+    <div className="FormGroup">
       { children }
+      <small>{error}</small>
     </div>
   );
 }
 
 FormGroup.propTypes = {
   children: PropTypes.node.isRequired,
+  error: PropTypes.string,
+};
+
+FormGroup.defaultProps = {
+  error: null,
 };

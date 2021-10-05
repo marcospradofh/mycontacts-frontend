@@ -1,6 +1,6 @@
 @import '../../assets/styles/variables.scss';
 
-.input {
+.Select {
   border: 2px solid #fff;
   width: 100%;
   background: #fff;
@@ -11,6 +11,7 @@
   font-size: 16px;
   color: $text-color;
   transition: border-color 0.2s ease-in;
+  appearance: none;
 
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.04);
 

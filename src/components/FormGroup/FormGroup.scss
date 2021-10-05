@@ -1,0 +1,14 @@
+@import '../../assets/styles/variables.scss';
+.FormGroup {
+
+  & + & {
+    margin-top: 16px;
+  }
+
+  small {
+    color: $danger-color-main;
+    font-size: 12px;
+    display: block;
+    margin-top: 8px;
+  }
+}
