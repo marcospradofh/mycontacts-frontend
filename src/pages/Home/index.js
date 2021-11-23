@@ -4,10 +4,10 @@ import { useEffect, useState, useMemo } from 'react';
 import styles from './styles.module.scss';
 
 import Loader from '../../components/Loader';
-import delay from '../../assets/utils/delay';
 import arrow from '../../assets/images/arrow.svg';
 import trash from '../../assets/images/trash.svg';
 import edit from '../../assets/images/edit.svg';
+import ContactsService from '../../services/ContactsService';
 
 export default function Home() {
   const [contacts, setContacts] = useState([]);
@@ -19,21 +19,19 @@ export default function Home() {
     contact.name.toLowerCase().includes(searchTerm.toLowerCase()))), [contacts, searchTerm]);
 
   useEffect(() => {
-    setIsLoading(true);
-
-    fetch(`http://localhost:3001/contacts?orderBy=${orderBy}`)
-      .then(async (response) => {
-        await delay();
-
-        const json = await response.json();
-        setContacts(json);
-      })
-      .catch((error) => {
+    async function loadContacts() {
+      try {
+        setIsLoading(true);
+        const contactsList = await ContactsService.listContacts(orderBy);
+        setContacts(contactsList);
+      } catch (error) {
         console.error('erro', error);
-      })
-      .finally(() => {
+      } finally {
         setIsLoading(false);
-      });
+      }
+    }
+
+    loadContacts();
   }, [orderBy]);
 
   function handleToggleOrderBy() {
