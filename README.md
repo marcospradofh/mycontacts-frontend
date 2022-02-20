@@ -1,4 +1,4 @@
-# MyContacts Fron-End
+# MyContacts Front-end
 
 Projeto de agenda eletrônica.
 
